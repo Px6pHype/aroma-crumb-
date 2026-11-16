@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aroma &amp; Crumb — авторская кондитерская и кофейня в Актобе</title>
+<meta name="description" content="Свежая выпечка, авторские десерты и спешелти-кофе собственной обжарки. Доставка по Актобе за 40 минут.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FAF7F2;--ink:#2C1E16;--accent:#C87D55;--accent-d:#A2593A;--card:#fff;--soft:#F1E8DB;--muted:#74604F;--line:rgba(44,30,22,.12);--on:#2C1E16;--sh:0 10px 28px rgba(44,30,22,.08);--sh2:0 22px 44px rgba(44,30,22,.16);--serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;--sans:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1A120D;--ink:#F4EBDD;--accent:#D48B62;--accent-d:#E3A582;--card:#251912;--soft:#21160F;--muted:#BBA796;--line:rgba(244,235,221,.14);--sh:0 10px 28px rgba(0,0,0,.35);--sh2:0 22px 44px rgba(0,0,0,.5)}}
+:root[data-theme="dark"]{--bg:#1A120D;--ink:#F4EBDD;--accent:#D48B62;--accent-d:#E3A582;--card:#251912;--soft:#21160F;--muted:#BBA796;--line:rgba(244,235,221,.14);--sh:0 10px 28px rgba(0,0,0,.35);--sh2:0 22px 44px rgba(0,0,0,.5)}
+*,*::before,*::after{box-sizing:inherit;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(84px + env(safe-area-inset-top,0px));-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+a{-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.08;letter-spacing:-.01em}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
+.logo{font:600 1.75rem/1 var(--serif);color:var(--ink);text-decoration:none;white-space:nowrap}
+.logo b{color:var(--accent);font-weight:600}
+.links{display:flex;gap:34px}
+.links a{position:relative;padding:10px 0;color:var(--ink);text-decoration:none;font-weight:500;font-size:.95rem}
+.links a::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.links a:hover::after{transform:scaleX(1)}
+
+.btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 30px;border-radius:999px;border:1.5px solid var(--accent);background:var(--accent);color:var(--on);font:600 .98rem var(--sans);text-decoration:none;cursor:pointer;transition:transform .3s,box-shadow .3s,background .3s,color .3s;-webkit-tap-highlight-color:transparent}
+.btn::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);transform:translateX(-120%);transition:transform .7s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(200,125,85,.42)}
+.btn:hover::after{transform:translateX(120%)}
+.btn:active{transform:scale(.97)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--bg);box-shadow:none}
+.btn.sm{min-height:46px;padding:0 24px}
+
+.hero{padding:clamp(36px,7vw,96px) 0 clamp(48px,7vw,104px)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(32px,5vw,72px);align-items:center}
+h1{font-size:clamp(2.6rem,7.2vw,5.1rem)}
+.lead{margin:24px 0 34px;max-width:32em;font-size:clamp(1.02rem,2.4vw,1.18rem);color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:14px}
+.art{position:relative;width:100%;max-width:440px;aspect-ratio:4/5;margin-inline:auto;border-radius:999px 999px 28px 28px;background:radial-gradient(circle at 30% 18%,#F3CDAE,transparent 55%),linear-gradient(160deg,#D9936B,#C87D55 50%,#7E472B);box-shadow:var(--sh2);display:grid;place-items:center;transition:transform .6s}
+.art:hover{transform:rotate(-1.5deg) scale(1.02)}
+.art svg{width:76%;margin-top:14%;filter:drop-shadow(0 18px 18px rgba(44,30,22,.28))}
+.steam path{animation:st 3.4s ease-in-out infinite}
+.steam path:nth-child(2){animation-delay:.6s}
+.steam path:nth-child(3){animation-delay:1.2s}
+.chip{position:absolute;left:50%;bottom:7%;transform:translateX(-50%);white-space:nowrap;background:var(--card);color:var(--ink);padding:10px 20px;border-radius:999px;font-size:.88rem;font-weight:600;box-shadow:var(--sh)}
+@keyframes st{0%,100%{opacity:.15;transform:translateY(6px)}50%{opacity:.9;transform:translateY(-4px)}}
+@keyframes up{from{opacity:0;transform:translateY(22px)}}
+.hero .txt>*{animation:up .8s backwards}
+.hero .txt>:nth-child(2){animation-delay:.12s}
+.hero .txt>:nth-child(3){animation-delay:.24s}
+.hero .art{animation:up .9s .2s backwards}
+
+section{padding:clamp(56px,8vw,104px) 0}
+.head{max-width:640px;margin-bottom:36px}
+.head h2{font-size:clamp(2.2rem,5.4vw,3.5rem)}
+.head p{color:var(--muted);margin-top:14px}
+#menu{background:var(--soft)}
+.tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
+.tab{min-height:48px;padding:0 24px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--ink);font:500 .95rem var(--sans);cursor:pointer;transition:background .3s,color .3s,border-color .3s,transform .2s;-webkit-tap-highlight-color:transparent}
+.tab:hover{border-color:var(--accent)}
+.tab:active{transform:scale(.96)}
+.tab[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,310px),1fr));gap:24px}
+.card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;box-shadow:var(--sh);transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .4s,opacity .3s}
+.card[hidden]{display:none}
+.card.out{opacity:0;transform:scale(.94)}
+.card:hover{transform:translateY(-8px);box-shadow:var(--sh2)}
+.thumb{height:150px;display:grid;place-items:center;font-size:3.4rem;background:linear-gradient(135deg,var(--g1),var(--g2))}
+.thumb span{transition:transform .5s}
+.card:hover .thumb span{transform:scale(1.18) rotate(-6deg)}
+.card[data-cat="coffee"]{--g1:#EBC8A8;--g2:#C98E63}
+.card[data-cat="dessert"]{--g1:#F1D1C4;--g2:#D69A8A}
+.card[data-cat="breakfast"]{--g1:#F3E2B8;--g2:#DDB46A}
+.body{display:flex;flex-direction:column;gap:6px;flex:1;padding:20px 22px 24px}
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.card h3{font-size:1.65rem}
+.price{font-weight:600;color:var(--accent-d);white-space:nowrap}
+.w{font-size:.85rem;font-weight:600;color:var(--accent-d)}
+.c{color:var(--muted);font-size:.95rem}
+
+.perks{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.perk{padding:32px 28px;border:1px solid var(--line);border-radius:12px 12px 12px 40px;background:var(--card);transition:border-color .35s,transform .35s,box-shadow .35s}
+.perk:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:var(--sh)}
+.ic{display:grid;place-items:center;width:56px;height:56px;margin-bottom:20px;border-radius:50%;background:var(--soft);color:var(--accent-d)}
+.ic svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.perk h3{font-size:1.5rem;margin-bottom:10px}
+.perk p{color:var(--muted)}
+
+footer{background:#21160F;color:#F4EBDD;padding:64px 0 28px}
+.fg{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}
+footer h4{font-size:1.4rem;color:#E3A582;margin-bottom:12px}
+footer p,footer li{color:#CDBBA9}
+footer ul{list-style:none;padding:0}
+footer a{color:inherit}
+.fl{font:600 2rem/1.1 var(--serif);margin-bottom:12px}
+.wa{margin-top:20px;background:#25D366;border-color:#25D366;color:#08301A}
+.wa svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linejoin:round}
+.soc{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.soc a{display:inline-flex;align-items:center;min-height:46px;padding:0 20px;border:1px solid rgba(244,235,221,.25);border-radius:999px;color:#F4EBDD;text-decoration:none;font-size:.92rem;transition:background .3s,color .3s,border-color .3s}
+.soc a:hover{background:var(--accent);border-color:var(--accent);color:#2C1E16}
+.copy{margin-top:48px;padding-top:22px;border-top:1px solid rgba(244,235,221,.14);font-size:.85rem;color:#9C8977}
+
+@media(max-width:860px){
+.hero .wrap,.fg{grid-template-columns:1fr}
+.perks{grid-template-columns:1fr}
+.art{max-width:340px}
+}
+@media(max-width:720px){
+html{scroll-padding-top:calc(12px + env(safe-area-inset-top,0px))}
+header{position:static}
+.nav{flex-wrap:wrap;min-height:0;padding:12px 0 4px}
+.links{order:3;width:100%;gap:0}
+.links a{flex:1;text-align:center;padding:14px 0}
+.cta .btn{width:100%}
+.tabs{display:grid;grid-template-columns:1fr 1fr}
+.wa{width:100%}
+}
+@media(max-width:560px){
+.card{flex-direction:row}
+.thumb{width:96px;height:auto;flex:none;font-size:2.4rem}
+.body{padding:16px}
+.card h3{font-size:1.4rem}
+.top{flex-direction:column;gap:2px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">Aroma <b>&amp;</b> Crumb</a>
+    <nav class="links" aria-label="Основное меню">
+      <a href="#menu">Меню</a>
+      <a href="#about">О нас</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="btn sm" href="#contacts" data-wa="Здравствуйте! Хочу сделать заказ.">Заказать</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="txt">
+        <h1>Тёплая выпечка и кофе, который мы обжариваем сами</h1>
+        <p class="lead">Авторские десерты, завтраки и спешелти-кофе в самом сердце Актобе. Печём каждое утро, готовим из натуральных продуктов и никуда не торопимся.</p>
+        <div class="cta">
+          <a class="btn" href="#menu">Смотреть меню</a>
+          <a class="btn ghost" href="#contacts" data-wa="Здравствуйте! Хочу забронировать столик.">Забронировать столик</a>
+        </div>
+      </div>
+      <div class="art" role="img" aria-label="Чашка кофе с паром">
+        <svg viewBox="0 0 300 270" aria-hidden="true">
+          <ellipse cx="150" cy="250" rx="108" ry="12" fill="#2C1E16" opacity=".2"/>
+          <ellipse cx="150" cy="238" rx="104" ry="16" fill="#F6EBDD"/>
+          <path d="M82 120h136v56c0 34-28 58-68 58s-68-24-68-58z" fill="#FFF8EE"/>
+          <path d="M218 138h14c18 0 18 40 0 40h-18" fill="none" stroke="#FFF8EE" stroke-width="12" stroke-linecap="round"/>
+          <ellipse cx="150" cy="120" rx="68" ry="14" fill="#5E3B28"/>
+          <ellipse cx="150" cy="118" rx="48" ry="7" fill="#C87D55" opacity=".75"/>
+          <g class="steam" fill="none" stroke="#FFF8EE" stroke-width="6" stroke-linecap="round">
+            <path d="M118 96c-12-14 12-24 0-40"/><path d="M150 92c-12-14 12-24 0-40"/><path d="M182 96c-12-14 12-24 0-40"/>
+          </g>
+        </svg>
+        <span class="chip">Выпекаем каждое утро</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="wrap">
+      <div class="head">
+        <h2>Меню</h2>
+        <p>Выберите, с чего начнёте: с чашки кофе, десерта или полноценного завтрака.</p>
+      </div>
+      <div class="tabs" role="group" aria-label="Категории меню">
+        <button class="tab" data-f="all" aria-pressed="true">Все</button>
+        <button class="tab" data-f="coffee" aria-pressed="false">Кофе</button>
+        <button class="tab" data-f="dessert" aria-pressed="false">Десерты</button>
+        <button class="tab" data-f="breakfast" aria-pressed="false">Завтраки</button>
+      </div>
+      <div class="grid">
+        <article class="card" data-cat="coffee">
+          <div class="thumb"><span>☕</span></div>
+          <div class="body"><div class="top"><h3>Флэт уайт</h3><span class="price">1&nbsp;800&nbsp;₸</span></div>
+          <p class="w">180 мл</p><p class="c">Двойной эспрессо из нашей обжарки и бархатное цельное молоко.</p></div>
+        </article>
+        <article class="card" data-cat="coffee">
+          <div class="thumb"><span>🍯</span></div>
+          <div class="body"><div class="top"><h3>Раф «Карамельный»</h3><span class="price">2&nbsp;300&nbsp;₸</span></div>
+          <p class="w">300 мл</p><p class="c">Эспрессо, натуральные сливки, ванильный сахар и солёная карамель.</p></div>
+        </article>
+        <article class="card" data-cat="dessert">
+          <div class="thumb"><span>🥐</span></div>
+          <div class="body"><div class="top"><h3>Круассан с фисташкой</h3><span class="price">2&nbsp;100&nbsp;₸</span></div>
+          <p class="w">120 г</p><p class="c">Слоёное масляное тесто, фисташковый крем и хрустящая глазурь.</p></div>
+        </article>
+        <article class="card" data-cat="dessert">
+          <div class="thumb"><span>🍫</span></div>
+          <div class="body"><div class="top"><h3>Фондан «Бельгия»</h3><span class="price">2&nbsp;900&nbsp;₸</span></div>
+          <p class="w">140 г</p><p class="c">Тёмный бельгийский шоколад, сливочное масло и шарик ванильного мороженого.</p></div>
+        </article>
+        <article class="card" data-cat="breakfast">
+          <div class="thumb"><span>🍳</span></div>
+          <div class="body"><div class="top"><h3>Шакшука с фетой</h3><span class="price">3&nbsp;400&nbsp;₸</span></div>
+          <p class="w">320 г</p><p class="c">Яйца пашот, томатный соус, фета, зелень и тост на закваске.</p></div>
+        </article>
+        <article class="card" data-cat="breakfast">
+          <div class="thumb"><span>🥞</span></div>
+          <div class="body"><div class="top"><h3>Сырники с ягодами</h3><span class="price">2&nbsp;700&nbsp;₸</span></div>
+          <p class="w">240 г</p><p class="c">Домашний творог, ягодный соус, сметана и капля мёда.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="head">
+        <h2>Вкус, который мы не упрощаем</h2>
+        <p>Aroma &amp; Crumb — небольшая авторская кондитерская в Актобе. Мы любим простые продукты, точные рецепты и честный кофе.</p>
+      </div>
+      <div class="perks">
+        <div class="perk">
+          <div class="ic"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="12" rx="6" ry="9" transform="rotate(35 12 12)"/><path d="M8 7.5c3 1.5 5 4.500 8 9"/></svg></div>
+          <h3>Своя обжарка зерна</h3>
+          <p>Обжариваем спешелти-зёрна небольшими партиями, поэтому кофе в чашке всегда свежий и ароматный.</p>
+        </div>
+        <div class="perk">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c3.500 4.500 6 7.500 6 11a6 6 0 0 1-12 0c0-3.500 2.500-6.500 6-11z"/><path d="M9.500 15a2.500 2.500 0 0 0 2.500 2.500"/></svg></div>
+          <h3>Натуральные сливки и бельгийский шоколад</h3>
+          <p>Никаких заменителей: настоящие сливки, сливочное масло и шоколад из Бельгии в каждом десерте.</p>
+        </div>
+        <div class="perk">
+          <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 8.500V13l3 2M9 3h6"/></svg></div>
+          <h3>Доставка по Актобе за 40 минут</h3>
+          <p>Привезём горячий кофе и тёплую выпечку в термоупаковке. Достаточно написать нам в WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contacts">
+  <div class="wrap">
+    <div class="fg">
+      <div>
+        <div class="fl">Aroma &amp; Crumb</div>
+        <p>Авторская кондитерская и кофейня. Напишите нам, чтобы заказать десерты, доставку или столик.</p>
+        <a class="btn wa" href="#contacts" data-wa="Здравствуйте! Пишу с сайта Aroma & Crumb.">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.800 13.500L3 21l4.600-1.200A9 9 0 1 0 12 3z"/></svg>
+          Написать в WhatsApp
+        </a>
+        <div class="soc">
+          <a href="https://instagram.com/aromaandcrumb" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://t.me/aromaandcrumb" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://tiktok.com/@aromaandcrumb" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+      <div>
+        <h4>Адрес</h4>
+        <ul><li>г. Актобе,</li><li>пр. Абилкайыр хана, 52</li><li><a href="tel:+77000000000">+7 700 000-00-00</a></li></ul>
+      </div>
+      <div>
+        <h4>Часы работы</h4>
+        <ul><li>Пн–Пт: 08:00–22:00</li><li>Сб–Вс: 09:00–23:00</li><li>Доставка: до 21:30</li></ul>
+      </div>
+    </div>
+    <p class="copy">© 2026 Aroma &amp; Crumb. Актобе.</p>
+  </div>
+</footer>
+
+<script>
+var WA='77000000000';
+document.querySelectorAll('[data-wa]').forEach(function(a){
+  a.href='https://wa.me/'+WA+'?text='+encodeURIComponent(a.dataset.wa);
+  a.target='_blank';a.rel='noopener';
+});
+var tabs=document.querySelectorAll('.tab'),cards=document.querySelectorAll('.card');
+tabs.forEach(function(t){
+  t.addEventListener('click',function(){
+    tabs.forEach(function(x){x.setAttribute('aria-pressed',x===t)});
+    var f=t.dataset.f;
+    cards.forEach(function(c){
+      var show=f==='all'||c.dataset.cat===f;
+      clearTimeout(c._t);
+      if(show){
+        c.hidden=false;
+        requestAnimationFrame(function(){requestAnimationFrame(function(){c.classList.remove('out')})});
+      }else{
+        c.classList.add('out');
+        c._t=setTimeout(function(){c.hidden=true},300);
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
